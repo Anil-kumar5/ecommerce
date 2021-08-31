@@ -1,0 +1,13 @@
+.carticon{
+    display: flex;
+    position: relative;
+    bottom: 6px;
+}
+.cartcount{
+    margin-left:-152.5px;
+    height:10px;
+    position:relative;
+    top:-10px;
+    font-size:10px;
+    cursor:default;
+}

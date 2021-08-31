@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import Homepage from './components/Homepage';
+import Practice, { Filt, Filtering } from './components/Practice';
+import { Redirect, Route } from 'react-router-dom';
+import Collections from './collections/Collections';
+import SignInSignUp from './signin/SignInSignUp';
+import Chechout from './cart/Chechout';
+import TryOne from './try/TryOne';
+import TryTwo from './try/TryTwo';
+import DirectoryTrial from './components/DirectoryTrial';
+import CollectionTrial from './collections/CollectionTrial';
+import RoutingPract from './collections/RoutingPract';
+import CollectionCategory from './collections/CollectionCategory';
+const HatsPage = () =>{
+  return(
+  <div>
+    <h1>Hats Page</h1>
+  </div>
+  )
+}
 
-function App() {
+function App(props) {
+  //if we add extra component then it displays last one}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <Route exact path="/" component={Homepage}/>
+      <Route exact path="/practice" component={Practice,Filt,Filtering}/>
+      <Route exact path='/collections' component={Collections}/>
+      <Route exact path="/signin" component={SignInSignUp}/>
+      <Route exact path='/checkout' component={Chechout}/>
+      <Route exact path='/firstone' component={TryOne}/>
+      <Route exact path='/second' component={TryTwo}/>
+      <Route exact path='/directory' component={DirectoryTrial}/>
+      <Route exact path ='/collect'  render={()=>false?<Redirect to='/' />:<CollectionTrial/>}/>
+      {/* <Route exact path = {`/collections/:id`} component={RoutingPract}/> */}
+      <Route eaxct path={`/collections/:cId`} component={CollectionCategory}/>
+      <Route exact path="/collections/hats" component = {HatsPage}/>
     </div>
   );
 }

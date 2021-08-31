@@ -1,0 +1,61 @@
+.checkout-page{
+  position: absolute;
+  top:100px;
+  left:20vw;
+  width:55%;
+  height:90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:10px auto 0;
+}
+.checkout-headers{
+    width:100%;
+    height:40px;
+    display: flex;
+    /* justify-content: space-between;    */
+  border-bottom: 1px solid black;
+}
+.checkoutcontainer{
+  width:80%;
+  /* background-color: black; */
+  /* margin-left:105px; */
+}
+.headername{
+  margin-left:85px;
+}
+.checkoutproducts{
+  display: flex;
+  justify-content:flex-start;
+  justify-content: space-around;
+  position: relative;
+}
+.checkouttotal{
+  position: relative;
+  left:90%
+}
+.iquantity{
+  position: relative;
+  left:20px;
+}
+.iprice{
+  position:relative;
+  left:60px;
+}
+.iremove{
+  position:relative;
+  left:85px;
+  cursor:default;
+}
+.leftarrow{
+  position: relative;
+  left:0px;
+  top:6px;
+  cursor:pointer;
+}
+.rightarrow{
+  position: relative;
+  left:-10px;
+  top:6px;
+  cursor:pointer;
+}

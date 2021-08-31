@@ -1,0 +1,71 @@
+.signincontainer{
+    position:absolute;
+    top:15vh;
+    left:10%;
+}
+.signinheader,.signupheader{
+    font-size: 18px;
+    position: relative;
+    left:10vw;
+}
+span{
+    font-size:12px;
+    position: relative;
+    left:10vw;
+}
+label{
+    font-size:12px;
+}
+.emailinput{
+    position: relative;
+    left:29px;
+
+}
+.emaildiv{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.custombutton{
+     color:white;
+    background-color: black;
+}
+.passwordinput,.emailinput,.i{
+    width:25vw;
+    border:none;
+    border-bottom: 1px solid grey;
+}
+.labelpassword{
+    position:relative;
+    left:5vw;
+}
+.labelemail{
+    position:relative;
+    left:5vw;
+    z-index: 1;;
+}
+.signupcontainer{
+    position: relative;
+    left:50%;
+    top:10vh;
+}
+.userup{
+    position:relative;
+    left:4.7vw;
+}
+.emailup{
+    position:relative;
+    left:4.5vw;
+    z-index:1;
+}
+.passwordup{
+    position:relative;
+    left:4.2vw;
+}
+.conpwdup{
+    position:relative;
+    left:3vw;
+}
+.inverted{
+    background-color: black;
+    border:none;
+}

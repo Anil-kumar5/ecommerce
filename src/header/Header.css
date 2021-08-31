@@ -1,0 +1,40 @@
+.header{
+    width:96%;
+    display: flex;
+    justify-content: space-between;
+}
+.logocontainer{
+    width:40px !important;
+    height:40px !important;
+    margin-left: 40px;
+}
+.logolink{
+    position:relative;
+    left:30px;
+}
+.headerlink{
+    display: flex;
+    justify-content: space-between;
+    flex:.1;
+    position:relative;
+    right:30px;
+}
+.shop,.contact{
+    text-decoration: none;
+    margin-left:10px;
+}
+.shopspan{
+    position: relative;
+    left:-50px;
+    font-size:15px;
+    color:purple;
+    cursor: default;
+
+}
+.signinspan,.signoutspan{
+    position: relative;
+    left:-20px;
+    font-size:15px;
+    color:purple;
+    cursor:default;
+}

@@ -1,0 +1,54 @@
+.collection{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+ .collectionheader{
+    font-size:18px;
+}
+
+.collectionpreview{
+    display: flex;
+    margin-bottom: 40px;
+}
+.itemsbackground{
+    width:230px;
+    height:200px;
+    background-repeat: no-repeat;
+}
+.itemsbackground:hover{
+    opacity: 0.5;
+}
+.itemname,.itemprice {
+    position:relative;
+    top:190px;
+    left:-10px;
+}
+
+.items{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemicon{
+    height:16px !important;
+    margin-right:-5px;
+}
+
+.itemprice{
+    font-size: 15px;
+}
+.inveretdclass{
+    position:relative;
+    top:-60px;
+    left:50px;
+    background-color: black;
+    border:none;
+    color: white;
+    width:120px;
+    text-align: center;
+    padding:5px;
+}
+.inveretdclass:hover{
+    opacity: 0.5;
+}
