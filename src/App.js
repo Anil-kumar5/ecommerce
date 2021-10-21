@@ -11,11 +11,12 @@ import DirectoryTrial from './components/DirectoryTrial';
 import CollectionTrial from './collections/CollectionTrial';
 import RoutingPract from './collections/RoutingPract';
 import CollectionCategory from './collections/CollectionCategory';
-const HatsPage = () =>{
-  return(
-  <div>
-    <h1>Hats Page</h1>
-  </div>
+import { BrowserRouter } from 'react-router-dom';
+const HatsPage = () => {
+  return (
+    <div>
+      <h1>Hats Page</h1>
+    </div>
   )
 }
 
@@ -24,18 +25,20 @@ function App(props) {
   return (
     <div>
 
-      <Route exact path="/" component={Homepage}/>
-      <Route exact path="/practice" component={Practice,Filt,Filtering}/>
-      <Route exact path='/collections' component={Collections}/>
-      <Route exact path="/signin" component={SignInSignUp}/>
-      <Route exact path='/checkout' component={Chechout}/>
-      <Route exact path='/firstone' component={TryOne}/>
-      <Route exact path='/second' component={TryTwo}/>
-      <Route exact path='/directory' component={DirectoryTrial}/>
-      <Route exact path ='/collect'  render={()=>false?<Redirect to='/' />:<CollectionTrial/>}/>
+       <BrowserRouter>
+      <Route exact path="/practice" component={Practice, Filt, Filtering} />
+      <Route exact path='/collections' component={Collections} />
+      <Route exact path="/signin" component={SignInSignUp} />
+      <Route exact path='/checkout' component={Chechout} />
+      <Route exact path='/firstone' component={TryOne} />
+      <Route exact path='/second' component={TryTwo} />
+      <Route exact path='/directory' component={DirectoryTrial} />
+      <Route exact path='/collect' render={() => false ? <Redirect to='/' /> : <CollectionTrial />} />
       {/* <Route exact path = {`/collections/:id`} component={RoutingPract}/> */}
-      <Route eaxct path={`/collections/:cId`} component={CollectionCategory}/>
-      <Route exact path="/collections/hats" component = {HatsPage}/>
+      <Route eaxct path={`/collections/:cId`} component={CollectionCategory} />
+      <Route exact path="/collections/hats" component={HatsPage} />
+      <Route exact path="/" component={Homepage} />
+      </BrowserRouter>
     </div>
   );
 }

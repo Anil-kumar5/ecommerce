@@ -7,6 +7,7 @@ import './Collections.css';
 import Header from '../header/Header';
 import { CollectionSelect } from './CollectionSelect';
 import CollectionOverView from './CollectionOverView';
+import { BrowserRouter } from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import CollectionCategory from './CollectionCategory';
 import RoutingPract from './RoutingPract';
@@ -28,6 +29,7 @@ const TrialPageTwo = () =>(
 
 function Collections({collectionData,match}) {
     // const [data,setData] = React.useState(collectionData)
+    debugger;
     console.log(match.path)
     return (
         <>
@@ -41,13 +43,15 @@ function Collections({collectionData,match}) {
           }    */}
           {/* <CollectionOverView/> */}
           {/* <Route component={CollectionOverView}/> its worked */}
+          <BrowserRouter>
           <Route exact path={`${match.path}`} component={CollectionOverView}/>
           {/* {console.log(match.path)} */}
           <Route exact path={`${match.path}/:id`} component={CollectionCategory}/>
           {/* <Route component={RoutingPract}/>  its worked */}
           <Route path={`${match.path}/:categoryId`} component={categoryPage}/>
-          <Route exact path={`${match.path}/trial`} component={TrialPage}/>
+          <Route exact path={match.path+'/trial'} component={TrialPage}/>
           <Route exact path="/collections/trial2" component={TrialPageTwo}/>
+          </BrowserRouter>
         </div>
     
         </>

@@ -1,7 +1,7 @@
 import { createSelector } from "reselect";
 
 
-const selectDirectory = state =>state.directoryReducer;
+const selectDirectory = state => state.directoryReducer;
 console.log(selectDirectory)
 export const DirectorySelect = createSelector(
     [selectDirectory],
